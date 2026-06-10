@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mustache - Keyboard app switching for macOS</title>
+    <meta
+      name="description"
+      content="Mustache is a macOS utility that assigns keyboard shortcuts to your running applications for fast, keyboard-first navigation."
+    >
+    <meta property="og:title" content="Mustache">
+    <meta property="og:description" content="A keyboard-first app switcher for macOS with visible shortcuts and persistent app assignments.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/icon.png">
+    <meta name="theme-color" content="#0f1113">
+    <link rel="icon" href="/assets/icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;600;700;800&family=Newsreader:opsz,wght@6..72,600;6..72,700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header" aria-label="Site header">
+      <a class="brand" href="#top" aria-label="Mustache home">
+        <img src="/assets/icon.png" width="44" height="44" alt="">
+        <span>Mustache</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#features">Features</a>
+        <a href="#snapshots">Snapshots</a>
+        <a href="#workflow">Workflow</a>
+        <a href="#buy" class="nav-cta">Available Soon</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">macOS command utility</p>
+          <h1 id="hero-title">Mustache</h1>
+          <p class="hero-lede">
+            Switch to the right Mac app by pressing the shortcut you can see. Mustache turns your running applications into a predictable keyboard map.
+          </p>
+          <div class="command-line" aria-label="Default switching command">
+            <kbd>Option</kbd>
+            <span>+</span>
+            <kbd>Tab</kbd>
+            <span>then</span>
+            <kbd>3</kbd>
+          </div>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary disabled" href="#buy">Available soon</a>
+            <a class="button ghost" href="#snapshots">Inspect the UI</a>
+          </div>
+          <dl class="proof-strip" aria-label="Product facts">
+            <div>
+              <dt>Trigger</dt>
+              <dd>Global hotkey</dd>
+            </div>
+            <div>
+              <dt>Assignments</dt>
+              <dd>Persistent pins</dd>
+            </div>
+            <div>
+              <dt>Requirement</dt>
+              <dd>macOS 15+</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero-visual" aria-label="Mustache overlay preview">
+          <div class="screen-label">Live overlay map</div>
+          <div class="mac-window hero-window">
+            <img src="/assets/switcher-overlay.png" alt="Mustache App Switcher Overlay">
+          </div>
+          <div class="floating-key top">Q</div>
+          <div class="floating-key bottom">8</div>
+        </div>
+      </section>
+
+      <section class="problem-band" aria-labelledby="problem-title">
+        <p class="eyebrow">Designed for fast context changes</p>
+        <h2 id="problem-title">Stop cycling through a hidden stack of windows.</h2>
+        <p>
+          Cmd+Tab is sequential. Mustache is spatial: every visible app gets a badge, and pinned apps keep the shortcuts you expect across launches and reboots.
+        </p>
+      </section>
+
+      <section class="features" id="features" aria-labelledby="features-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Features</p>
+          <h2 id="features-title">The demo is the product: press, see, switch.</h2>
+        </div>
+        <div class="feature-grid">
+          <article>
+            <span class="feature-mark">01</span>
+            <h3>Keyboard-first navigation</h3>
+            <p>Use a global hotkey and one visible badge key to jump directly to the target application.</p>
+          </article>
+          <article>
+            <span class="feature-mark">02</span>
+            <h3>Readable overlay</h3>
+            <p>Large app icons and sharp high-contrast badges make the next key obvious at a glance.</p>
+          </article>
+          <article>
+            <span class="feature-mark">03</span>
+            <h3>Flexible app sources</h3>
+            <p>Choose whether to switch between all running applications or restrict it to apps in your Dock.</p>
+          </article>
+          <article>
+            <span class="feature-mark">04</span>
+            <h3>Pinned applications</h3>
+            <p>Pin your most-used apps with custom shortcuts that persist across launches and reboots.</p>
+          </article>
+          <article>
+            <span class="feature-mark">05</span>
+            <h3>Customizable layouts</h3>
+            <p>Tailor the overlay with dynamic width-based or fixed grid layouts to suit your screen real estate.</p>
+          </article>
+          <article>
+            <span class="feature-mark">06</span>
+            <h3>Usage statistics</h3>
+            <p>Track your app switching patterns and identify your most used shortcuts to optimize your workflow over time.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="snapshots" id="snapshots" aria-labelledby="snapshots-title">
+        <div class="section-kicker">
+          <p class="eyebrow">Snapshots</p>
+          <h2 id="snapshots-title">Settings built for repeated daily use.</h2>
+        </div>
+        <div class="snapshot-carousel" data-carousel aria-roledescription="carousel" aria-label="Mustache settings snapshots">
+          <div class="carousel-viewport">
+            <div class="carousel-track">
+              <figure class="snapshot-slide is-active">
+                <div class="snapshot-media">
+                  <img src="/assets/settings-general.png" alt="General settings showing launch at login and menu bar icon options.">
+                </div>
+                <figcaption>
+                  <span>General</span>
+                  <strong>General</strong>
+                  <p>Keep the utility available at login and configure application sources.</p>
+                </figcaption>
+              </figure>
+              <figure class="snapshot-slide">
+                <div class="snapshot-media">
+                  <img src="/assets/settings-application.png" alt="Applications settings showing pinned applications and custom shortcuts.">
+                </div>
+                <figcaption>
+                  <span>Pins</span>
+                  <strong>Applications</strong>
+                  <p>Pin frequently-used applications and assign persistent custom shortcuts.</p>
+                </figcaption>
+              </figure>
+              <figure class="snapshot-slide">
+                <div class="snapshot-media">
+                  <img src="/assets/settings-size.png" alt="Layout settings showing layout mode and badge style options.">
+                </div>
+                <figcaption>
+                  <span>Grid</span>
+                  <strong>Layout & Size</strong>
+                  <p>Choose dynamic or fixed grid layouts, and fully customize the badge appearance.</p>
+                </figcaption>
+              </figure>
+              <figure class="snapshot-slide">
+                <div class="snapshot-media">
+                  <img src="/assets/settings-statics.png" alt="Statistics settings showing usage patterns.">
+                </div>
+                <figcaption>
+                  <span>Stats</span>
+                  <strong>Statistics</strong>
+                  <p>Review your application switching behavior and optimize your workflow.</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="carousel-controls" aria-label="Snapshot controls">
+            <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous snapshot">Prev</button>
+            <div class="carousel-dots" role="tablist" aria-label="Choose snapshot">
+              <button class="is-active" type="button" data-carousel-dot="0" aria-label="Show General snapshot"></button>
+              <button type="button" data-carousel-dot="1" aria-label="Show Applications snapshot"></button>
+              <button type="button" data-carousel-dot="2" aria-label="Show Layout snapshot"></button>
+              <button type="button" data-carousel-dot="3" aria-label="Show Statistics snapshot"></button>
+            </div>
+            <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next snapshot">Next</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow" id="workflow" aria-labelledby="workflow-title">
+        <div>
+          <p class="eyebrow">Workflow</p>
+          <h2 id="workflow-title">A three-keystroke switch, no pointer travel.</h2>
+        </div>
+        <ol class="workflow-list">
+          <li>
+            <span>Invoke</span>
+            <p>Press your configured hotkey, defaulting to Option + Tab, to show the app switcher overlay.</p>
+          </li>
+          <li>
+            <span>Select</span>
+            <p>While holding the modifier key, press the number or letter shown on the app badge.</p>
+          </li>
+          <li>
+            <span>Switch</span>
+            <p>Release the modifier key to instantly hide the overlay and switch focus to your app.</p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="buy" id="buy" aria-labelledby="buy-title">
+        <div class="buy-panel">
+          <img src="/assets/icon.png" width="96" height="96" alt="">
+          <div>
+            <p class="eyebrow">Available soon</p>
+            <h2 id="buy-title">Mustache for macOS</h2>
+            <p>
+              A focused utility for power users who want predictable app switching and minimal pointer movement.
+            </p>
+          </div>
+          <span class="button primary disabled" aria-disabled="true">Sales link soon</span>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mustache</span>
+      <span>Predictable app switching for macOS.</span>
+    </footer>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
