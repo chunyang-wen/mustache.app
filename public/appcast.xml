@@ -1,0 +1,15 @@
+<?xml version="1.0" standalone="yes"?>
+<rss xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" version="2.0">
+    <channel>
+        <title>Mustache</title>
+        <item>
+            <title>0.1.0</title>
+            <pubDate>Sat, 13 Jun 2026 13:13:31 +0800</pubDate>
+            <sparkle:version>1</sparkle:version>
+            <sparkle:shortVersionString>0.1.0</sparkle:shortVersionString>
+            <sparkle:minimumSystemVersion>15.6</sparkle:minimumSystemVersion>
+            <sparkle:hardwareRequirements>arm64</sparkle:hardwareRequirements>
+            <enclosure url="https://github.com/chunyang-wen/mustache.app/releases/download/v0.1.0/Mustache-0.1.0.zip" length="6100822" type="application/octet-stream"/>
+        </item>
+    </channel>
+</rss>
