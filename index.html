@@ -9,7 +9,7 @@
       content="Mustache is a macOS utility that assigns keyboard shortcuts to your running applications for fast, keyboard-first navigation."
     >
     <meta property="og:title" content="Mustache">
-    <meta property="og:description" content="A keyboard-first app switcher for macOS with visible shortcuts and persistent app assignments.">
+    <meta property="og:description" content="A keyboard-first app switcher for macOS with visible shortcuts, search, window picking, and persistent app assignments.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="/assets/icon.png">
     <meta name="theme-color" content="#0f1113">
@@ -40,7 +40,7 @@
           <p class="eyebrow">macOS command utility</p>
           <h1 id="hero-title">Mustache</h1>
           <p class="hero-lede">
-            Switch to the right Mac app by pressing the shortcut you can see. Mustache turns your running applications into a predictable keyboard map.
+            Switch to the right Mac app by pressing the shortcut you can see. Mustache turns your running applications into a predictable keyboard map, with search and window picking when your workspace gets busy.
           </p>
           <div class="command-line" aria-label="Default switching command">
             <kbd>Option</kbd>
@@ -63,8 +63,8 @@
               <dd>Persistent pins</dd>
             </div>
             <div>
-              <dt>Requirement</dt>
-              <dd>macOS 15+</dd>
+              <dt>Search</dt>
+              <dd>Space, type, Return</dd>
             </div>
           </dl>
         </div>
@@ -83,7 +83,7 @@
         <p class="eyebrow">Designed for fast context changes</p>
         <h2 id="problem-title">Stop cycling through a hidden stack of windows.</h2>
         <p>
-          Cmd+Tab is sequential. Mustache is spatial: every visible app gets a badge, and pinned apps keep the shortcuts you expect across launches and reboots.
+          Cmd+Tab is sequential. Mustache is spatial: every visible app gets a badge, pinned apps keep the shortcuts you expect, and noisy apps can stay out of the switcher.
         </p>
       </section>
 
@@ -105,21 +105,36 @@
           </article>
           <article>
             <span class="feature-mark">03</span>
+            <h3>Search without leaving the overlay</h3>
+            <p>Press Space, type a few characters, and press Return to jump to the first matching app.</p>
+          </article>
+          <article>
+            <span class="feature-mark">04</span>
+            <h3>Window picker</h3>
+            <p>When the app has multiple visible windows, Mustache gives you a second compact picker for the exact target.</p>
+          </article>
+          <article>
+            <span class="feature-mark">05</span>
             <h3>Flexible app sources</h3>
             <p>Choose whether to switch between all running applications or restrict it to apps in your Dock.</p>
           </article>
           <article>
-            <span class="feature-mark">04</span>
+            <span class="feature-mark">06</span>
             <h3>Pinned applications</h3>
             <p>Pin your most-used apps with custom shortcuts that persist across launches and reboots.</p>
           </article>
           <article>
-            <span class="feature-mark">05</span>
+            <span class="feature-mark">07</span>
+            <h3>App exclusions</h3>
+            <p>Hide distracting or rarely-used apps from the switcher while keeping pinned apps visible.</p>
+          </article>
+          <article>
+            <span class="feature-mark">08</span>
             <h3>Customizable layouts</h3>
             <p>Tailor the overlay with dynamic width-based or fixed grid layouts to suit your screen real estate.</p>
           </article>
           <article>
-            <span class="feature-mark">06</span>
+            <span class="feature-mark">09</span>
             <h3>Usage statistics</h3>
             <p>Track your app switching patterns and identify your most used shortcuts to optimize your workflow over time.</p>
           </article>
@@ -129,7 +144,7 @@
       <section class="snapshots" id="snapshots" aria-labelledby="snapshots-title">
         <div class="section-kicker">
           <p class="eyebrow">Snapshots</p>
-          <h2 id="snapshots-title">Settings built for repeated daily use.</h2>
+          <h2 id="snapshots-title">The overlay and settings built for repeated daily use.</h2>
         </div>
         <div class="snapshot-carousel" data-carousel aria-roledescription="carousel" aria-label="Mustache settings snapshots">
           <div class="carousel-viewport">
@@ -141,7 +156,17 @@
                 <figcaption>
                   <span>General</span>
                   <strong>General</strong>
-                  <p>Keep the utility available at login and configure application sources.</p>
+                  <p>Configure the trigger, menu bar presence, first-letter assignment, and settings backup.</p>
+                </figcaption>
+              </figure>
+              <figure class="snapshot-slide">
+                <div class="snapshot-media">
+                  <img src="/assets/switcher-multi-window.png" alt="Mustache window picker listing multiple Safari windows.">
+                </div>
+                <figcaption>
+                  <span>Windows</span>
+                  <strong>Multi-window picker</strong>
+                  <p>When a selected app has multiple windows, pick the exact target or release the modifier to use the first window.</p>
                 </figcaption>
               </figure>
               <figure class="snapshot-slide">
@@ -151,7 +176,7 @@
                 <figcaption>
                   <span>Pins</span>
                   <strong>Applications</strong>
-                  <p>Pin frequently-used applications and assign persistent custom shortcuts.</p>
+                  <p>Pin frequently-used applications, assign persistent shortcuts, and exclude noise from the switcher.</p>
                 </figcaption>
               </figure>
               <figure class="snapshot-slide">
@@ -180,9 +205,10 @@
             <button class="carousel-arrow" type="button" data-carousel-prev aria-label="Previous snapshot">Prev</button>
             <div class="carousel-dots" role="tablist" aria-label="Choose snapshot">
               <button class="is-active" type="button" data-carousel-dot="0" aria-label="Show General snapshot"></button>
-              <button type="button" data-carousel-dot="1" aria-label="Show Applications snapshot"></button>
-              <button type="button" data-carousel-dot="2" aria-label="Show Layout snapshot"></button>
-              <button type="button" data-carousel-dot="3" aria-label="Show Statistics snapshot"></button>
+              <button type="button" data-carousel-dot="1" aria-label="Show multi-window picker snapshot"></button>
+              <button type="button" data-carousel-dot="2" aria-label="Show Applications snapshot"></button>
+              <button type="button" data-carousel-dot="3" aria-label="Show Layout snapshot"></button>
+              <button type="button" data-carousel-dot="4" aria-label="Show Statistics snapshot"></button>
             </div>
             <button class="carousel-arrow" type="button" data-carousel-next aria-label="Next snapshot">Next</button>
           </div>
@@ -204,8 +230,12 @@
             <p>While holding the modifier key, press the number or letter shown on the app badge.</p>
           </li>
           <li>
-            <span>Switch</span>
-            <p>Release the modifier key to instantly hide the overlay and switch focus to your app.</p>
+            <span>Search</span>
+            <p>Press Space and type when you want to filter the overlay instead of scanning the grid.</p>
+          </li>
+          <li>
+            <span>Land</span>
+            <p>Pick a window if needed, or release the modifier to accept the first one, then Mustache brings the target forward.</p>
           </li>
         </ol>
       </section>
