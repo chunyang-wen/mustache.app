@@ -1,7 +1,23 @@
 import './style.css';
 
 document.addEventListener('DOMContentLoaded', () => {
-  window.scrollTo(0, 0);
+  const params = new URLSearchParams(window.location.search);
+  const purchaseSuccess = document.querySelector('[data-purchase-success]');
+  const licenseWrapper = document.querySelector('[data-license-wrapper]');
+  const licenseKey = document.querySelector('[data-license-key]');
+
+  if (params.get('purchase') === 'success' && purchaseSuccess) {
+    purchaseSuccess.hidden = false;
+    document.querySelector('#buy')?.scrollIntoView({ block: 'start' });
+
+    const key = params.get('license_key');
+    if (key && licenseWrapper && licenseKey) {
+      licenseKey.textContent = key;
+      licenseWrapper.hidden = false;
+    }
+  } else {
+    window.scrollTo(0, 0);
+  }
   
   const track = document.querySelector('.carousel-track');
   const slides = Array.from(document.querySelectorAll('.snapshot-slide'));
